@@ -4,6 +4,6 @@
 • "./tfbs_C/tf8merAlign.cpp" uses brute-force approach to design mutations to a binding site that could prevent the binding of one transcription factors without impacting the binding of other transcription factors at the site.  
 
 Presently contains code for transcription factor binding site programs.  
-tfbs_C contains a start to writing these in C.  
-data_files contains example data files.
+"tfbs_C" contains C codebase.  
+"data_files" contains example data files.
 
