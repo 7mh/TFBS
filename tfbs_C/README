@@ -1,0 +1,19 @@
+Data files
+- *_11111111.txt - transcription factor file for a particular transcription factor.  Each possible 8-mer is present in exactly one row; the total # rows is 1/2 of 4**8 because complimentary sequences have the same behavior and thus appear on the same line.
+- *.asc - a DNA sequence file from an enhancer region of interest
+
+Programs
+- tf8merFilter.cpp - retain only 8mers with a high enough e-score (default 0.3)
+./tf8merFilter 0.3 < TF_8MER_FILE.tsv > output.tsv
+8-mer	8-mer	E-score	Median	Z-score
+AAAAAAAA	TTTTTTTT	0.24584	29514.79	0.5820
+
+- tf8merAlign.cpp - align 8mers from a list against a sequence
+./tf8merAlign SEQ_FILE.txt < TF_8MERS_.tsv
+
+- test.sh - runs the above programs on one of the example files
+
+
+Brute force Mutation -
+(1) search for mutations of sequence file so that there are no binding sites with at least 3 8mer matches in a row
+(2) do the same but also while trying to preserve binding sites for a second (or more) transcription factors
